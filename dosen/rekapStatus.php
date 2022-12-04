@@ -84,7 +84,6 @@ $count_mhs_wali_lulusSkripsi = $db->query("SELECT COUNT(skripsi.NIM) AS jumlah F
                         <table id="admin-tabel-mahasiswa" class="cell-border dataTable table" cellspacing="1" width="100%">
                             <thead>
                                 <tr>
-                                    <th>No.</th>
                                     <th>Nama</th>
                                     <th>NIM</th>
                                     <th>No HP</th>
@@ -102,7 +101,6 @@ $count_mhs_wali_lulusSkripsi = $db->query("SELECT COUNT(skripsi.NIM) AS jumlah F
                                 $i=1;
                                 while ($row = $result->fetch_object()) {
                                     echo "<tr>
-                                    <td>".$i."</td>
                                     <td>".$row->Nama."</td>
                                     <td>".$row->NIM."</td>
                                     <td>".$row->No_Hp."</td>
