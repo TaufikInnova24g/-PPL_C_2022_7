@@ -38,7 +38,7 @@ $count_mahasiswa_lulus = $db->query("SELECT COUNT(NIM) AS jumlah FROM mahasiswa 
                         </div>
                         <div class="row no-gutters">
                             <div class="col-md-4 profil-departemen">
-                                <img src="../assets/img/logo-undip.png" class="" alt="ProfilePicture  ">
+                                <img src="../assets/img/logo.png" class="" alt="ProfilePicture  ">
                             </div>
                             <div class="col-md-8">
                                 <div   div class="card-body">
@@ -214,7 +214,7 @@ $count_mahasiswa_lulus = $db->query("SELECT COUNT(NIM) AS jumlah FROM mahasiswa 
                         </div>
                     </div>
                 </div>
-            <div class="card mb-4">
+            <div class="card mb-5">
             <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                     <b>Data Rekap Mahasiswa</b>
@@ -228,11 +228,9 @@ $count_mahasiswa_lulus = $db->query("SELECT COUNT(NIM) AS jumlah FROM mahasiswa 
                                     <th>Nama</th>
                                     <th>NIM</th>
                                     <th>Email</th>
-                                    <th>Alamat</th>
                                     <th>No HP</th>
-                                    <th>Semester</th>
+                                    <th>Smstr</th>
                                     <th>Status</th>
-                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -246,12 +244,10 @@ $count_mahasiswa_lulus = $db->query("SELECT COUNT(NIM) AS jumlah FROM mahasiswa 
                                     <td>".$row->Nama."</td>
                                     <td>".$row->NIM."</td>
                                     <td>".$row->Email."</td>
-                                    <td>".$row->Alamat."</td>
                                     <td>".$row->No_Hp."</td>
                                     <td>".$row->semester."</td>
                                     <td>".$row->Status."</td>
-                                    <td><a onclick='view_data(".$row->NIM.")'></a>
-                                    </td>";
+                                    </tr>";
                                     $i++;
                                 }
                             ?>
