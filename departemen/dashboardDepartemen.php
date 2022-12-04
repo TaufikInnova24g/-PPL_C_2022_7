@@ -38,7 +38,7 @@ $count_mahasiswa_lulus = $db->query("SELECT COUNT(NIM) AS jumlah FROM mahasiswa 
                         </div>
                         <div class="row no-gutters">
                             <div class="col-md-4 profil-departemen">
-                                <img src="../assets/img/logo.png" class="" alt="ProfilePicture  ">
+                                <img src="../assets/img/logo-undip.png" class="" alt="ProfilePicture  ">
                             </div>
                             <div class="col-md-8">
                                 <div   div class="card-body">
@@ -120,7 +120,6 @@ $count_mahasiswa_lulus = $db->query("SELECT COUNT(NIM) AS jumlah FROM mahasiswa 
                     <table id="admin-tabel-mahasiswa" class="cell-border dataTable" cellspacing="1" width="80%" >
                         <thead>
                             <tr>
-                                <th>No </th>
                                 <th>Nama</th>
                                 <th>NIP</th>
                                 <th>Email</th>
@@ -136,7 +135,6 @@ $count_mahasiswa_lulus = $db->query("SELECT COUNT(NIM) AS jumlah FROM mahasiswa 
                                 $i = 1;
                                 while ($row = $result->fetch_object()) {
                                     echo "<tr>
-                                    <td>".$i."</td>
                                     <td>".$row->Nama."</td>
                                     <td>".$row->NIP."</td>
                                     <td>".$row->Email."</td>
@@ -214,7 +212,7 @@ $count_mahasiswa_lulus = $db->query("SELECT COUNT(NIM) AS jumlah FROM mahasiswa 
                         </div>
                     </div>
                 </div>
-            <div class="card mb-5">
+            <div class="card mb-4">
             <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                     <b>Data Rekap Mahasiswa</b>
@@ -223,14 +221,14 @@ $count_mahasiswa_lulus = $db->query("SELECT COUNT(NIM) AS jumlah FROM mahasiswa 
                     <table id="admin-tabel-mahasiswa" class="cell-border dataTable" cellspacing="1" width="80%" >
                         <thead>
                             <tr>
-
-                                    <th>No.</th>
                                     <th>Nama</th>
                                     <th>NIM</th>
                                     <th>Email</th>
+                                    <th>Alamat</th>
                                     <th>No HP</th>
-                                    <th>Smstr</th>
+                                    <th>Semester</th>
                                     <th>Status</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -240,14 +238,15 @@ $count_mahasiswa_lulus = $db->query("SELECT COUNT(NIM) AS jumlah FROM mahasiswa 
                                 $i=1;
                                 while ($row = $result->fetch_object()) {
                                     echo "<tr>
-                                    <td>".$i."</td>
                                     <td>".$row->Nama."</td>
                                     <td>".$row->NIM."</td>
                                     <td>".$row->Email."</td>
+                                    <td>".$row->Alamat."</td>
                                     <td>".$row->No_Hp."</td>
                                     <td>".$row->semester."</td>
                                     <td>".$row->Status."</td>
-                                    </tr>";
+                                    <td><a onclick='view_data(".$row->NIM.")'></a>
+                                    </td>";
                                     $i++;
                                 }
                             ?>
