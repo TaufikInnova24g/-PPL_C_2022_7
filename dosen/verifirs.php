@@ -13,7 +13,6 @@
                     <table class="table dataTable" id="">
                         <thead class="table-light">
                             <tr>
-                                <th>No</th>
                                 <th>NIM</th>
                                 <th>Nama</th>
                                 <th>Aksi</th>
@@ -26,7 +25,6 @@
                                 $i = 1;
                                 while ($row = $result->fetch_object()) {
                                     echo "<tr>
-                                    <td>".$i."</td>
                                     <td>".$row->NIM."</td>
                                     <td>".$row->Nama."</td>
                                     <td><a class='btn btn-primary' href='lihatirs.php'>Lihat</a></td>";
@@ -59,7 +57,7 @@
                                 $i = 1;
                                 while ($row = $result->fetch_object()) {
                                     echo "<tr>
-                                    <td>".$i."</td>
+                                    <td>".$i++."</td>
                                     <td>".$row->NIM."</td>
                                     <td>".$row->Nama."</td>
                                     <td><a class='btn btn-primary' href='lihatirs.php'>Lihat</a></td>";
